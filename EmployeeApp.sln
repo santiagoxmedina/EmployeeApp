@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.757
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{DC245892-A406-4610-A6EA-AC4AB47E7FE8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "Repository\Repository.csproj", "{ACC67FF1-86DE-43EF-BB73-F6E87B064969}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication", "WebApplication\WebApplication.csproj", "{06153C0B-1114-4BDA-83D5-6D30F0CC6DC3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DC245892-A406-4610-A6EA-AC4AB47E7FE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC245892-A406-4610-A6EA-AC4AB47E7FE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC245892-A406-4610-A6EA-AC4AB47E7FE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC245892-A406-4610-A6EA-AC4AB47E7FE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACC67FF1-86DE-43EF-BB73-F6E87B064969}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACC67FF1-86DE-43EF-BB73-F6E87B064969}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACC67FF1-86DE-43EF-BB73-F6E87B064969}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACC67FF1-86DE-43EF-BB73-F6E87B064969}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06153C0B-1114-4BDA-83D5-6D30F0CC6DC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06153C0B-1114-4BDA-83D5-6D30F0CC6DC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06153C0B-1114-4BDA-83D5-6D30F0CC6DC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06153C0B-1114-4BDA-83D5-6D30F0CC6DC3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {456AA561-3585-4DD1-A6AC-7BCF96E78BCA}
+	EndGlobalSection
+EndGlobal
