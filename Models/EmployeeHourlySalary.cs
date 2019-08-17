@@ -1,22 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Models
+﻿namespace Models
 {
-    class EmployeeHourlySalary : IEmployeeSalary
+    public class EmployeeHourlySalary : Employee
     {
-        private Employee employee;
-        public EmployeeHourlySalary(Employee _employee)
+        public EmployeeHourlySalary(EmployeeDTO employeeDTO) : base(employeeDTO)
         {
-            employee = _employee;
+            
         }
 
-        public float GetSalary()
+        public new float GetSalary()
         {
-            return employee.HourlySalary * 12 * 120;
+            return HourlySalary * 12 * 120;
         }
     }
 }

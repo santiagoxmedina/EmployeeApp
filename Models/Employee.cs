@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace Models
 {
-    public class Employee
+    public class Employee: IEmployeeSalary
     {
+        public const string NotImplementedExceptionMessage = "Employee must not implement salary";
         public int Id { get; set; }
         public string Name { get; set; }
         public string ContractTypeName { get; set; }
@@ -16,9 +17,8 @@ namespace Models
         public string RoleDescription { get; set; }
         public float HourlySalary { get; set; }
         public float MonthlySalary { get; set; }
-        public float Salary { get { return employeeSalary.GetSalary(); } }
+        public float Salary { get { return GetSalary(); } }
 
-        private IEmployeeSalary employeeSalary;
 
         public Employee(EmployeeDTO employeeDTO)
         {
@@ -32,9 +32,9 @@ namespace Models
             MonthlySalary = employeeDTO.MonthlySalary;
         }
 
-        public void SetSalaryManager(IEmployeeSalary _employeeSalary)
+        public float GetSalary()
         {
-            employeeSalary = _employeeSalary;
+            throw new NotImplementedException(NotImplementedExceptionMessage);
         }
     }
 }

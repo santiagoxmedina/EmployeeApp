@@ -8,7 +8,6 @@ namespace Models
 {
     public class EmployeeFactory
     {
-
         public static List<Employee> GetEmployees(List<EmployeeDTO> employees)
         {
             List<Employee> result = new List<Employee>();
@@ -23,28 +22,14 @@ namespace Models
         {
             if (employeeDTO.ContractTypeName == "HourlySalaryEmployee")
             {
-                return GetHourlyEmployee(employeeDTO);
+                return new EmployeeHourlySalary(employeeDTO);
             }
             else if (employeeDTO.ContractTypeName == "MonthlySalaryEmployee")
             {
-                return GetMontlyEmployee(employeeDTO);
+                return new EmployeeMonthlySalary(employeeDTO);
 
             }
             return null;
-        }
-
-        private static Employee GetMontlyEmployee(EmployeeDTO employeeDTO)
-        {
-            Employee result = new Employee(employeeDTO);
-            result.SetSalaryManager(new EmployeeMontlySalary(result));
-            return result;
-        }
-
-        private static Employee GetHourlyEmployee(EmployeeDTO employeeDTO)
-        {
-            Employee result = new Employee(employeeDTO);
-            result.SetSalaryManager(new EmployeeHourlySalary(result));
-            return result;
         }
     }
 }

@@ -9,6 +9,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "Repository\Re
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication", "WebApplication\WebApplication.csproj", "{06153C0B-1114-4BDA-83D5-6D30F0CC6DC3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AplicationTest", "AplicationTest\AplicationTest.csproj", "{E6B87408-90F2-4EB1-A367-FE0DC8F84401}"
+	ProjectSection(ProjectDependencies) = postProject
+		{06153C0B-1114-4BDA-83D5-6D30F0CC6DC3} = {06153C0B-1114-4BDA-83D5-6D30F0CC6DC3}
+		{DC245892-A406-4610-A6EA-AC4AB47E7FE8} = {DC245892-A406-4610-A6EA-AC4AB47E7FE8}
+		{ACC67FF1-86DE-43EF-BB73-F6E87B064969} = {ACC67FF1-86DE-43EF-BB73-F6E87B064969}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +34,10 @@ Global
 		{06153C0B-1114-4BDA-83D5-6D30F0CC6DC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{06153C0B-1114-4BDA-83D5-6D30F0CC6DC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{06153C0B-1114-4BDA-83D5-6D30F0CC6DC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6B87408-90F2-4EB1-A367-FE0DC8F84401}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6B87408-90F2-4EB1-A367-FE0DC8F84401}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6B87408-90F2-4EB1-A367-FE0DC8F84401}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6B87408-90F2-4EB1-A367-FE0DC8F84401}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
