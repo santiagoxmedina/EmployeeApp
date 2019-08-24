@@ -6,7 +6,7 @@ namespace Repository
 {
     public interface IRepositoy
     {
-        Task<List<EmployeeDTO>> GetEmployeesAsync();
-        Task<EmployeeDTO> SearchEmployeesByIdAsync(int? searchId);
+        Task<List<EmployeeInfoDTO>> GetEmployeesAsync();
+        Task<EmployeeInfoDTO> SearchEmployeesByIdAsync(int? searchId);
     }
 }

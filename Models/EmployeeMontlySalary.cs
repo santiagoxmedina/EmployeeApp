@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 
 namespace Models
 {
-    public class EmployeeMonthlySalary : Employee
+    public class EmployeeMonthlySalary : Employee,IEmployeeSalary
     {
-        public EmployeeMonthlySalary(EmployeeDTO employeeDTO) : base(employeeDTO)
+        public new float Salary { get { return GetSalary(); } }
+        public EmployeeMonthlySalary(EmployeeInfoDTO employeeDTO) : base(employeeDTO)
         {
         }
 
-        public new float GetSalary()
+        public  float GetSalary()
         {
             return MonthlySalary * 12;
         }

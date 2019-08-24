@@ -2,12 +2,13 @@
 {
     public class EmployeeHourlySalary : Employee
     {
-        public EmployeeHourlySalary(EmployeeDTO employeeDTO) : base(employeeDTO)
+        public new float Salary { get { return GetSalary(); } }
+        public EmployeeHourlySalary(EmployeeInfoDTO employeeDTO) : base(employeeDTO)
         {
             
         }
 
-        public new float GetSalary()
+        public  float GetSalary()
         {
             return HourlySalary * 12 * 120;
         }

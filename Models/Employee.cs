@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Models
 {
-    public class Employee: IEmployeeSalary
+    public class Employee
     {
         public const string NotImplementedExceptionMessage = "Employee must not implement salary";
         public int Id { get; set; }
@@ -17,10 +17,10 @@ namespace Models
         public string RoleDescription { get; set; }
         public float HourlySalary { get; set; }
         public float MonthlySalary { get; set; }
-        public float Salary { get { return GetSalary(); } }
+        public float Salary { get { return 0; } }
 
 
-        public Employee(EmployeeDTO employeeDTO)
+        public Employee(EmployeeInfoDTO employeeDTO)
         {
             Id = employeeDTO.Id;
             Name = employeeDTO.Name;
@@ -32,9 +32,5 @@ namespace Models
             MonthlySalary = employeeDTO.MonthlySalary;
         }
 
-        public float GetSalary()
-        {
-            throw new NotImplementedException(NotImplementedExceptionMessage);
-        }
     }
 }

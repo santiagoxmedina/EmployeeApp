@@ -44,7 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EmployeeDTO.cs" />
+    <Compile Include="EmployeeInfoDTO.cs" />
     <Compile Include="Employee.cs" />
     <Compile Include="EmployeeFactory.cs" />
     <Compile Include="EmployeeHourlySalary.cs" />

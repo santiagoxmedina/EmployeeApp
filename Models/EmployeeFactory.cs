@@ -8,7 +8,7 @@ namespace Models
 {
     public class EmployeeFactory
     {
-        public static List<Employee> GetEmployees(List<EmployeeDTO> employees)
+        public static List<Employee> GetEmployees(List<EmployeeInfoDTO> employees)
         {
             List<Employee> result = new List<Employee>();
             for (int i = 0; i < employees.Count; i++)
@@ -18,7 +18,7 @@ namespace Models
             return result;
         }
 
-        private static Employee GetEmployee(EmployeeDTO employeeDTO)
+        private static Employee GetEmployee(EmployeeInfoDTO employeeDTO)
         {
             if (employeeDTO.ContractTypeName == "HourlySalaryEmployee")
             {

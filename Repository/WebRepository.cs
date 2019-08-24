@@ -18,7 +18,7 @@ namespace Repository
             employeesURL = _employeesURL;
         }
 
-        public async Task<List<EmployeeDTO>> GetEmployeesAsync()
+        public async Task<List<EmployeeInfoDTO>> GetEmployeesAsync()
         {
             using (var client = new HttpClient())
             {
@@ -28,26 +28,26 @@ namespace Repository
                 if (response.IsSuccessStatusCode)
                 {
                     string textResult = await response.Content.ReadAsStringAsync();
-                    var employees = JsonConvert.DeserializeObject<List<EmployeeDTO>>(textResult);
+                    var employees = JsonConvert.DeserializeObject<List<EmployeeInfoDTO>>(textResult);
                     return employees;
                 }
                 else
                 {
-                    return new List<EmployeeDTO>();
+                    return new List<EmployeeInfoDTO>();
                 }
                 
             }
             
         }
 
-        public async Task<EmployeeDTO> SearchEmployeesByIdAsync(int? searchId)
+        public async Task<EmployeeInfoDTO> SearchEmployeesByIdAsync(int? searchId)
         {
             if (searchId == null)
             {
                 return null;
             }
        
-            List<EmployeeDTO> employeed = await GetEmployeesAsync();
+            List<EmployeeInfoDTO> employeed = await GetEmployeesAsync();
             return employeed.Find(x=>x.Id == searchId.Value);
         }
     }

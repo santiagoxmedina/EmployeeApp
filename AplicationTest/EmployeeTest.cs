@@ -9,7 +9,7 @@ namespace AplicationTest
         [TestMethod]
         public void Salary_ShouldThrow_NotImplementedException()
         {
-            EmployeeDTO employeeDTO = new EmployeeDTO();
+            EmployeeInfoDTO employeeDTO = new EmployeeInfoDTO();
             employeeDTO.MonthlySalary = 100;
             Employee employee = new Employee(employeeDTO);
             try
